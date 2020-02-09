@@ -1,0 +1,40 @@
+Modos de abrir un archivo.
+Por el tipo de archivo.
+'t' se trata de un archivo de texto.
+'b' permite escritura en modo binario
+'U' define saltos de línea universales para el modo de lectura.
+Los archivos de texto y los archivos binarios representan tipos distintos en Python.
+
+Por el tipo de acceso.
+'r' es el modo de lectura.
+'w' es un modo de escritura. En caso de existir un archivo, éste es sobreescrito.
+'a' es un modo de escritura. En caso de existir un archivo, comienza a escribir al final de éste.
+'x' es un modo de escritura para crear un nuevo archivo. En caso de que el archivo exista se emitirá un error de tipo FileExistsError.
+'+' es un modo de escritura/lectura.
+Tamaño y posición.
+Los archivos pueden contener ya sea bytes o caracteres acomodados uno detrás de otro. A cada elemento le corresponde una posición numérica que inicia a partir de cero.
+
+Métodos más utilizados para gestión de archivos comunes para archivos binarios y de texto.
+close().
+Es imperativo que una vez que se hayan realizado todas las operaciones de entrada y de salida de archivos, este sea cerrado de manera adecuada. En caso de no hacerlo, es altamente probable que el archivo se encuentre en un estado inestable y corra riesgo de que la información contenida se corrompa o destruya.
+
+writable().
+Devolverá True si el archivo está en modo de escritura.
+
+readable().
+Devolverá True si el archivo está en modo de lectura.
+
+seekable().
+Devolverá True si es posible desplazarse dentro del archivo.
+
+read().
+Si el archivo se encuentra en modo de lectura, leerá y regresará el contenido del archivo desde la posición en la que se encuentre lasta el final del archivo. Si se ingresa un número como argumento, leerá el número de posiciones indicadas en el argumento.
+
+write().
+Si el archivo se encuentra en modo de escritura, añadirá al archivo el contenido ingresado como argumento a partir de la posición en donde se encuentre, sobreescribiendo el texto ta existente. Una vez terminada la operación, regresará la nueva posición del puntero.
+
+tell().
+Regresará la posición en la que se encuentra el puntero dentro del archivo.
+
+seek().
+Moverá el puntero a la posición indicada.
